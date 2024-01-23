@@ -501,7 +501,7 @@ HAL_StatusTypeDef HAL_RCC_DeInit(void)
   WRITE_REG(RCC->CICR, 0xFFFFFFFFU);
 
   /* Reset all CSR flags */
-  SET_BIT(RCC->CSR, RCC_CSR_RMVF);
+  //SET_BIT(RCC->CSR, RCC_CSR_RMVF);
 
   /* Update the SystemCoreClock global variable */
   SystemCoreClock = MSI_VALUE;

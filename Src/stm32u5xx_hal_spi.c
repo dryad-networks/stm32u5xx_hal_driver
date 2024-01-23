@@ -1254,7 +1254,7 @@ HAL_StatusTypeDef HAL_SPI_Receive(SPI_HandleTypeDef *hspi, uint8_t *pData, uint1
   * @param  Timeout: Timeout duration
   * @retval HAL status
   */
-HAL_StatusTypeDef HAL_SPI_TransmitReceive(SPI_HandleTypeDef *hspi, const uint8_t *pTxData, uint8_t *pRxData,
+HAL_StatusTypeDef __attribute__((optimize("O0"))) HAL_SPI_TransmitReceive(SPI_HandleTypeDef *hspi, const uint8_t *pTxData, uint8_t *pRxData,
                                           uint16_t Size, uint32_t Timeout)
 {
   HAL_StatusTypeDef errorcode = HAL_OK;
